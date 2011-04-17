@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>{% block title %}{% endblock %} - Starter template for Hyde</title>
+        <title>Hyde Starter Kit {{ resource.meta.title_ending }}</title>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="/media/css/style.css" />
+        <link rel="stylesheet" href="{{ media_url('css/site.css') }}">
+        <link rel="stylesheet" href="{{ media_url('css/syntax.css') }}">
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
         </script>
@@ -11,21 +12,30 @@
     </head>
     <body>
         <header>
-            <h1>My title</h1>
-            <nav>
-            <ul>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-            </ul>
-            </nav>
+            <hgroup>
+            <h1>Hyde Starter Kit</h1>
+            <h2>Know your tool</h2>
+            </hgroup>
         </header>
-        <div id="content">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="what-next.html">What next</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <article id="content">
+        {# Main content block. Notice it has to pass through the
+           Markdown filter to generate HTML. If a block in content
+           pages contains only markup, you can omit the filter.
+        #}
             {% filter markdown -%}
             {% block content %}{% endblock %}
             {%- endfilter %}
-        </div>
+        </article>
         <footer>
-            <p>Links, copyright, date ...</p>
+        <p>Created by <a href="{{ author.url}}">{{ author.name}}</a> for <a
+            href="{{ project.url }}">{{ project.name }}</a>.</p>
         </footer>
     </body>
 </html>

@@ -1,3 +1,17 @@
 mode: learning
 media_root: media
 media_url: /media
+template: hyde.ext.templates.jinja.Jinja2Template
+plugins:
+    - hyde.ext.plugins.meta.MetaPlugin
+    - hyde.ext.plugins.auto_extend.AutoExtendPlugin
+    - hyde.ext.plugins.syntext.SyntextPlugin
+context:
+    data:
+        author:
+            name: Merlin Rebrović
+            url: "http://merlin.rebrovic.net"
+        project:
+            name: Hyde
+            url: "http://hyde.github.com"
+
