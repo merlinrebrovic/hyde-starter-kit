@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <link href='http://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
         <title>Hyde Starter Kit {{ resource.meta.title_ending }}</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="{{ media_url('css/style.css') }}">
@@ -13,7 +14,7 @@
     <body>
         <header>
             <hgroup>
-            <h1>Hyde Starter Kit</h1>
+            <h1><span>Hyde</span> Starter Kit</h1>
             <h2>Know your tool</h2>
             </hgroup>
         </header>
@@ -33,9 +34,9 @@
             {% block content %}{% endblock %}
             {%- endfilter %}
         </article>
-        <footer>
-        <p>Created by <a href="{{ author.url}}">{{ author.name}}</a> for <a
-            href="{{ project.url }}">{{ project.name }}</a>.</p>
-        </footer>
+        <aside>
+            <p>Created by <a href="{{ author.url}}">{{ author.name}}</a>
+            for <a href="{{ project.url }}">{{ project.name }}</a></p>
+        </aside>
     </body>
 </html>
