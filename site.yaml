@@ -11,7 +11,11 @@ context:
         author:
             name: Merlin Rebrović
             url: "http://merlin.rebrovic.net"
+        layout:
+            name: Hyde Starter Kit
+            url: "https://github.com/merlinrebrovic/hyde-starter-kit"
         project:
             name: Hyde
             url: "http://hyde.github.com"
+            install: "http://hyde.github.com/install.html"
 
