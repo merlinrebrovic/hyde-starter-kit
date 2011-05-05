@@ -35,6 +35,7 @@ p, ul {
 ul {
     margin-left: 2em;
 }
+
 header {
     position: absolute;
     top: 120px;
@@ -63,7 +64,7 @@ header h2 {
 
 nav {
     position: absolute;
-    top: 350px;
+    top: 340px;
     right: 120px;
     width: 200px;
     text-align: right;
@@ -76,6 +77,10 @@ nav a:visited {
     color: #fafafa;
     text-transform: uppercase;
     font-size: 2.8em;
+}
+
+nav a.selected {
+    color: #888;
 }
 
 nav a:hover {
@@ -93,6 +98,11 @@ aside {
     width: 140px;
     text-align: right;
     font-size: 1em;
+}
+
+nav, aside {
+    /* to line up with the header */
+    padding-right: 5px;
 }
 
 #content {

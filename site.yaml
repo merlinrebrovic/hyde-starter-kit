@@ -18,4 +18,10 @@ context:
             name: Hyde
             url: "http://hyde.github.com"
             install: "http://hyde.github.com/install.html"
-
+        menu:
+          - title: Home
+            url: index.html
+          - title: What next
+            url: what-next.html
+          - title: About
+            url: about.html

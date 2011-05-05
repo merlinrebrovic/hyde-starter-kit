@@ -19,11 +19,12 @@
             </hgroup>
         </header>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="what-next.html">What next</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
+        {# Move main menu rendering away from the base layout. This
+           way it can be used to generate the list many times, in
+           a footer, etc.
+        #}
+            {% from "macros.j2" import render_main_menu with context %}
+            {{ render_main_menu() }}
         </nav>
         <article id="content">
         {# Main content block. Notice it has to pass through the
