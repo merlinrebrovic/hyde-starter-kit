@@ -11,5 +11,4 @@ technologies step by step. Those are:
   * Jinja templates
   * Markdown
   * basic metadata and plugins
-  * syntax highlighting
 
