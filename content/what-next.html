@@ -31,20 +31,22 @@ previous one.
 The site is made of two folders and a [Hyde configuration][hyde_config]
 file. Folders are _content_ and _layout_.
 
-_Content_ contains all your page content, blog articles, pictures and
+_content_ contains all your page content, blog articles, pictures and
 resources like CSS and JavaScript. Everything that is unique is here.
 
-_Layout_ contains templates and macros. Everything that you'll want to
+_layout_ contains templates and macros. Everything that you'll want to
 reuse is here.
 
 
 2. Jinja2 template
 ------------------
 
-The _base.j2_ is a very short and simple Jinja2 template. This way you
-can concentrate on some of the basic features. Notice meta and context
-variables invocation inside curly braces, dynamic media path generation and
-running all content through the Markdown filter.
+_base.j2_ is a very short and simple Jinja2 template. This way you can
+concentrate on some of the basic features. Notice meta and context
+variables invocation inside curly braces, dynamic media path generation
+and running all content through the Markdown filter.
+
+_macros.j2_ contain a macro for generating the main menu.
 
 For more information or to try something new, visit the extensive [Jinja2
 documentation][jinja2_docs].
@@ -62,6 +64,9 @@ content block with some simple Markdown data.
 _What next_ goes a step furher. It introduces the in-file metadata that
 plugins will use to extend and fill the layout. It also uses some new
 Markdown features.
+
+_About_ has a _default_block_ metadata and mixes Markdown content with
+Jinja templates.
 
 [hyde_config]: http://hyde.github.com/config.html "Hyde configuration"
 [jinja2_docs]: http://jinja.pocoo.org/docs/templates/ "Jinja2 documentation"
