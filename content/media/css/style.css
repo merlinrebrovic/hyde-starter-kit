@@ -129,3 +129,14 @@ nav, aside {
     font-family: Tahoma, sans-serif;
     margin-bottom: 1.33em;
 }
+
+#content code {
+    display: block;
+    font-family: 'DejaVu Sans Mono', 'Liberation Mono', 'Courier New';
+    font-size: 1.2em;
+    background-color: #222;
+    padding: 5px 10px;
+    margin-bottom: 1.33em;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #111;
+}
