@@ -48,7 +48,7 @@ header {
 header h1 {
     font-size: 50px;
     font-weight: normal;
-    text-shadow: 2px 2px 1px black;
+    text-shadow: -1px 2px 1px black;
 }
 
 header h1 span {
@@ -59,7 +59,7 @@ header h2 {
     font-size: 28px;
     font-weight: normal;
     letter-spacing: 11px;
-    text-shadow: 2px 2px 1px black;
+    text-shadow: -1px 2px 1px black;
 }
 
 nav {
@@ -138,5 +138,7 @@ nav, aside {
     padding: 5px 10px;
     margin-bottom: 1.33em;
     border-top: 1px solid #444;
-    border-bottom: 1px solid #111;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #222;
+    border-left: 1px solid #111;
 }
