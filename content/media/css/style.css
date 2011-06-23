@@ -28,11 +28,11 @@ a:hover, a:focus {
     text-decoration: none;
 }
 
-p, ul {
+p, ul, ol {
     margin-bottom: 1.6em;
 }
 
-ul {
+ul, ol {
     margin-left: 2em;
 }
 

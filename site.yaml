@@ -6,6 +6,7 @@ plugins:
     - hyde.ext.plugins.meta.MetaPlugin
     - hyde.ext.plugins.auto_extend.AutoExtendPlugin
     # Plugins needed for the advances section.
+    - hyde.ext.plugins.sorter.SorterPlugin
     - hyde.ext.plugins.grouper.GrouperPlugin
 context:
     data:
@@ -36,6 +37,23 @@ meta:
     # a great way of simply adding or modifying properties of a very large
     # number of files.
     nodemeta: meta.yaml
+
+sorter:
+    name: # the name of the sorter (no pun intended)
+        attr: name # by which attributes will resources be sorted
+        filters:
+            source_file.kind: html
+            # You can include only files from a certain folder.
+            #resource.node: (name of the folder)
+        #reverse: True # if you need the list backwards
+    file_type:
+        attr: 
+            - source_file.kind
+            - source_file.size
+    index:
+        attr: meta.index
+        filters:
+            source_file.kind: html
 
 grouper:
     level:
