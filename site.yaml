@@ -5,7 +5,6 @@ template: hyde.ext.templates.jinja.Jinja2Template
 plugins:
     - hyde.ext.plugins.meta.MetaPlugin
     - hyde.ext.plugins.auto_extend.AutoExtendPlugin
-    - hyde.ext.plugins.syntext.SyntextPlugin
 context:
     data:
         author:
