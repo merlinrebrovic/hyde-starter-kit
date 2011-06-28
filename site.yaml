@@ -59,6 +59,7 @@ sorter:
 
 grouper:
     level:
+        sorter: name
         description: Difficulty levels
         groups:
             - name: basic
