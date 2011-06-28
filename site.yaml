@@ -28,7 +28,7 @@ context:
           - title: About
             url: /about.html
           - title: Advanced
-            url: /advanced/sorter.html
+            url: /advanced/overview.html
 
 ### Advanced part ###
 

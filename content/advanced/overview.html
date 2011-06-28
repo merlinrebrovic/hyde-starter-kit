@@ -1,3 +1,18 @@
 ---
-index: 1
+index: 10
 ---
+
+More advanced topics
+====================
+
+If you have read and understood all basic topics covered in
+{% for res in site.content.walk_resources_grouped_by_basic() %}
+[{{ res.slug|capitalize|replace("-"," ") }}]({{ res.full_url }}), 
+{% endfor %}
+then you are ready for some more advanced features. They are explained in
+the same way as the basic part, building on the knowledge of the previous,
+so it is recommended that you follow them in the listed order.
+
+{% for res in resource.node.walk_resources_sorted_by_index() %}
+{{ loop.index }}. [{{ res.slug|capitalize|replace("-"," ") }}]({{ res.full_url }}) {% if res.name == "tagger.html" %}*(soon)*{% elif res.name == "overview.html" %}*(this file)*{% endif %} 
+{% endfor %}
