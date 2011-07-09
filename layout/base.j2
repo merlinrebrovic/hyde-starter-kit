@@ -38,5 +38,15 @@
             <p>Created by <a href="{{ author.url}}">{{ author.name}}</a>
             for <a href="{{ project.url }}">{{ project.name }}</a></p>
         </aside>
+
+        {# Some parts of the web are not needed for development and can
+           wait for production (ex. analytics). They can be included in
+           the final production build. Create a new config file, extend
+           the original one and override the "mode" property; then build
+           the site with the new "production configuration".
+        #}
+        {% if site.config.mode == "production" -%}
+            {% include "ga.j2" %}
+        {%- endif %}
     </body>
 </html>

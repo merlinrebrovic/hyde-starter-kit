@@ -39,6 +39,7 @@ meta:
     # a great way of simply adding or modifying properties of a very large
     # number of files.
     nodemeta: meta.yaml
+    ga_tracking_code: XX-XXXXXXXX-X
 
 sorter:
     name: # the name of the sorter (no pun intended)
