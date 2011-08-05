@@ -146,3 +146,8 @@ nav, aside {
     border-bottom: 1px solid #222;
     border-left: 1px solid #111;
 }
+
+#content .tags {
+    font-size: 0.8em;
+    color: #888;
+}
