@@ -1,5 +1,9 @@
 ---
 index: 3
+title_ending: "| Grouping"
+tags:
+    - sort
+    - group
 ---
 
 Grouping
@@ -18,7 +22,8 @@ Walking all groups and subgroups
 *{{ grp.description }}*
 
 {% for res in res_walker %}
-* {{ res.name }}
+  * [{{ res.slug|capitalize|replace("-"," ") }}]({{ res.full_url }}) \
+    ({{ res.name }})
 {% endfor %}
 
 {% endfor %}
@@ -27,7 +32,8 @@ Listing only the specific (sub)group
 ------------------------------------
 
 {% for res in site.content.walk_resources_grouped_by_advanced() %}
-* {{ res.name }}
+  * [{{ res.slug|capitalize|replace("-"," ") }}]({{ res.full_url }}) \
+    ({{ res.name }})
 {% endfor %}
 
 {# You can also call the top level group "level" to get all resources that

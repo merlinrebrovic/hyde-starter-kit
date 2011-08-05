@@ -8,6 +8,7 @@ plugins:
     # Plugins needed for the advances section.
     - hyde.ext.plugins.sorter.SorterPlugin
     - hyde.ext.plugins.grouper.GrouperPlugin
+    - hyde.ext.plugins.tagger.TaggerPlugin
 context:
     data:
         author:
@@ -78,3 +79,6 @@ grouper:
     #          description: Web technologies
     #        - name: seo
     #          description: Search Engine Optimization
+
+tagger:
+    sorter: name
