@@ -23,9 +23,11 @@ so it is recommended that you follow them in the listed order.
 {# List all resources from a group, sort them by index and list their tags. #}
 
 {% for res in resource.node.walk_resources_sorted_by_learning_order() %}
-{{ loop.index }}. [{{ res.slug|capitalize|replace("-"," ") }}]({{ res.full_url }}) {% if res.name == "overview.html" %}*(this file)*{% endif %}
-
-{# Sometimes you'll have to add HTML tags to a Markdown file for styling
+{{ loop.index }}. \
+    [{{ res.slug|capitalize|replace("-"," ") }}]({{ res.full_url }}) \
+    {% if res.name == "overview.html" %}*(this file)*{% endif %} \
+{#
+   Sometimes you'll have to add HTML tags to a Markdown file for styling
    or adding some special features, and Markdown is OK with that.
 #}
 <span class="tags">tags: 
