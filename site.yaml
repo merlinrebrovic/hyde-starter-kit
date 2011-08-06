@@ -24,12 +24,12 @@ context:
         menu:
           - title: Home
             url: /index.html
-          - title: What next
-            url: /what-next.html
+          - title: First steps
+            url: /first-steps.html
+          - title: Advanced topics
+            url: /advanced/overview.html
           - title: About
             url: /about.html
-          - title: Advanced
-            url: /advanced/overview.html
 
 ### Advanced part ###
 

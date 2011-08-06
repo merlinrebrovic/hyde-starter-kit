@@ -16,6 +16,9 @@ used to build a particular advanced page. So you can see that the
 **sorting** was needed for all advanced topics, but **grouping** was
 used only for overview and grouping pages.
 
+Listing by tags
+---------------
+
 {# You can grab the list of all tags ... #}
 {% for tag, meta in site.tagger.tags %}
 *{{ tag }}*
@@ -34,6 +37,9 @@ used only for overview and grouping pages.
 {% for res in resource.node.walk_resources_tagged_with_sort() %}
 {% endfor %}
 #}
+
+Tag combination
+---------------
 
 You can also search for combination of tags. If you search for a
 resource that has **sort**, **tag** and **group** tags, only an
