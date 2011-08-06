@@ -1,7 +1,16 @@
 {% macro render_main_menu() -%}
+
+{# Set menu item selected if the current resource matches the item in the
+   site's config file or set "Advanced topics" selected for any resources
+   that have the "advanced" folder as their parent.
+#}
 <ul>
 {% for menu_item in menu -%}
-    <li><a {% if menu_item.url == resource.url %}class="selected"{% endif %} href="{{ menu_item.url }}">{{ menu_item.title }}</a></li>
+    <li><a {% if (menu_item.url == resource.full_url) or
+                 (menu_item.title == "Advanced topics"
+                  and resource.node.name == "advanced")
+            %}class="selected"{% endif %}
+            href="{{ menu_item.url }}">{{ menu_item.title }}</a></li>
 {%- endfor %}
 </ul>
 {%- endmacro %}
