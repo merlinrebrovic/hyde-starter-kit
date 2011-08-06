@@ -58,6 +58,10 @@ sorter:
         attr: meta.index
         filters:
             source_file.kind: html
+    learning_order:
+        attr: meta.learning_order
+        filters:
+            source_file.kind: html
 
 grouper:
     level:

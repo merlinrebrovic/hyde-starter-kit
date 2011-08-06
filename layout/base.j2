@@ -22,8 +22,8 @@
            way it can be used to generate the list many times, in
            a footer, etc.
         #}
-            {% from "macros.j2" import render_main_menu with context %}
-            {{ render_main_menu() }}
+            {% import "macros.j2" as macros with context %}
+            {{ macros.render_main_menu() }}
         </nav>
         <article id="content">
         {# Main content block. Notice it has to pass through the

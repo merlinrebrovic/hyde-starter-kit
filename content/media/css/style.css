@@ -151,3 +151,14 @@ nav, aside {
     font-size: 0.8em;
     color: #888;
 }
+
+#content .bottom_article_nav {
+    border-top: 1px dashed #888;
+    overflow: hidden;
+    margin-top: 40px;
+    padding-top: 10px;
+}
+
+#content .bottom_article_nav .next {
+    float: right;
+}

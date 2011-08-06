@@ -1,10 +1,11 @@
 ---
-index: 10
+index: 1
 title_ending: "| Advanced topics"
 tags:
     - sort
     - group
     - tag
+learning_order: 4
 ---
 
 More advanced topics
@@ -21,7 +22,7 @@ so it is recommended that you follow them in the listed order.
 
 {# List all resources from a group, sort them by index and list their tags. #}
 
-{% for res in resource.node.walk_resources_sorted_by_index() %}
+{% for res in resource.node.walk_resources_sorted_by_learning_order() %}
 {{ loop.index }}. [{{ res.slug|capitalize|replace("-"," ") }}]({{ res.full_url }}) {% if res.name == "overview.html" %}*(this file)*{% endif %}
 
 {# Sometimes you'll have to add HTML tags to a Markdown file for styling
@@ -37,3 +38,5 @@ so it is recommended that you follow them in the listed order.
 {% endfor %}
 </span>
 {% endfor %}
+
+{{ macros.render_bottom_article_nav() }}

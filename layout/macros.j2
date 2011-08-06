@@ -5,3 +5,22 @@
 {%- endfor %}
 </ul>
 {%- endmacro %}
+
+
+{# Advanced topics macro. Renders navigation at the end of the article. #}
+
+{% macro render_bottom_article_nav() %}
+<div class="bottom_article_nav">
+{% if resource.next_by_index is not none -%}
+    <div class="next"><a href="{{ resource.next_by_index.full_url }}">
+    {{ resource.next_by_index.meta.title_ending|replace("| ", "") }}</a>
+    &gt;</div>
+{%- endif %}
+
+{% if resource.prev_by_index is not none -%}
+    <div class="prev">&lt; <a href="{{ resource.prev_by_index.full_url }}">
+    {{ resource.prev_by_index.meta.title_ending|replace("| ", "") }}</a>
+    </div>
+{%- endif %}
+</div>
+{% endmacro %}
