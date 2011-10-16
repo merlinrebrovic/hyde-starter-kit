@@ -1,6 +1,7 @@
 mode: learning
 media_root: media
-media_url: /media
+media_url: /starter/media
+base_url: /starter/
 template: hyde.ext.templates.jinja.Jinja2Template
 plugins:
     - hyde.ext.plugins.meta.MetaPlugin
@@ -23,13 +24,13 @@ context:
             install: "http://hyde.github.com/install.html"
         menu:
           - title: Home
-            url: /index.html
+            url: index.html
           - title: First steps
-            url: /first-steps.html
+            url: first-steps.html
           - title: Advanced topics
-            url: /advanced/overview.html
+            url: advanced/overview.html
           - title: About
-            url: /about.html
+            url: about.html
 
 ### Advanced part ###
 
