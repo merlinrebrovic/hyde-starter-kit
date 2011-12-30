@@ -34,10 +34,6 @@
             {% block content %}{% endblock %}
             {%- endfilter %}
         </article>
-        <aside>
-            <p>Created by <a href="{{ author.url}}">{{ author.name}}</a>
-            for <a href="{{ project.url }}">{{ project.name }}</a></p>
-        </aside>
 
         {# Some parts of the web are not needed for development and can
            wait for production (ex. analytics). They can be included in
