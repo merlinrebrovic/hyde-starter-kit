@@ -1,3 +1,6 @@
+{# Generates the main and basic menu from context data in the site's
+   configuration file.
+#}
 {% macro render_basic_menu() -%}
 <ul class="basic">
 {% for menu_item in menu -%}
@@ -8,29 +11,35 @@
 {%- endmacro %}
 
 
+{# Generates the advanced menu from all files located in the content/advanced
+   folder. Only advanced section files have 'index' metadata, so we can be
+   certain that no other files will creep in.
+#}
 {% macro render_advanced_menu() -%}
 <ul class="advanced">
 {% for res in site.content.walk_resources_sorted_by_index() %}
     <li><a {% if (res.url == resource.url) %}class="selected"{% endif -%}
-        href="{{ res.full_url }}">{{ res.meta.title_ending|replace("| ", "") }}
+        href="{{ res.full_url }}">{{ res.meta.title }}
         </a></li>
 {% endfor %}
 </ul>
 {%- endmacro %}
 
 
-{# Advanced topics macro. Renders navigation at the end of the article. #}
+{# Advanced topics macro. Renders navigation at the end of an advanced
+   article. It also depends on 'index' metadata.
+#}
 {% macro render_bottom_article_nav() %}
 <div class="bottom_article_nav">
 {% if resource.next_by_index is not none -%}
     <div class="next"><a href="{{ resource.next_by_index.full_url }}">
-    {{ resource.next_by_index.meta.title_ending|replace("| ", "") }}</a>
+    {{ resource.next_by_index.meta.title }}</a>
     &gt;</div>
 {%- endif %}
 
 {% if resource.prev_by_index is not none -%}
     <div class="prev">&lt; <a href="{{ resource.prev_by_index.full_url }}">
-    {{ resource.prev_by_index.meta.title_ending|replace("| ", "") }}</a>
+    {{ resource.prev_by_index.meta.title }}</a>
     </div>
 {%- endif %}
 </div>

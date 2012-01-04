@@ -1,8 +1,10 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <link href="http://fonts.googleapis.com/css?family=Anton" rel="stylesheet" type="text/css">
-        <title>Hyde Starter Kit {{ resource.meta.title_ending }}</title>
+        <link href="http://fonts.googleapis.com/css?family=Anton"
+            rel="stylesheet" type="text/css">
+            <title>Hyde Starter Kit {% if resource.meta.title-%}
+                | {{ resource.meta.title}}{%-endif %}</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="{{ media_url('css/style.css') }}">
         <!--[if lt IE 9]>
