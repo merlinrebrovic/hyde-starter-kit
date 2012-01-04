@@ -23,7 +23,8 @@
            a footer, etc.
         #}
             {% import "macros.j2" as macros with context %}
-            {{ macros.render_main_menu() }}
+            {{ macros.render_basic_menu() }}
+            {{ macros.render_advanced_menu() }}
         </nav>
         <article id="content">
         {# Main content block. Notice it has to pass through the
