@@ -38,7 +38,7 @@ Then enter the folder, generate and serve the template:
 If you are a competent user - contribute
 ========================================
 
-If you feel you have mastered a particular area of Hyde very well and would
+If you feel you have mastered a particular area of [Hyde] very well and would
 like to share the knowledge, please fork this template and add a lesson in the
 *advanced section*. The best way would be to copy any file from
 `content/advanced/` and modify its metadata and content. The only restriction
